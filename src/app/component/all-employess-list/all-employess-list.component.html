@@ -1,0 +1,44 @@
+<app-header></app-header>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Employee email</th>
+        <th scope="col">Employee Phone Number</th>
+        <th scope="col">detailes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allEmp; index as i;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{user.empName}}</td>
+        <td>{{user.emailId}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td><span [routerLink]="['/updateemp',user.id]"   class="btn btn-info" style="margin-left: 10px" class="glyphicon glyphicon-pencil"></span></td>
+        <td><span  data-toggle="modal" (click)="delete(user.id)" data-target="#myModal" class="glyphicon glyphicon-trash"></span> </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are sure delete Employee</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-default" (click)=deleteemp() data-dismiss="modal">delete</button>
+      </div>
+    </div>
+
+  </div>
+</div>

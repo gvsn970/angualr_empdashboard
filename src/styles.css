@@ -1,0 +1,27 @@
+ @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');  
+ @import '~ngx-toastr/toastr';
+ /* @import "~bootstrap/dist/css/bootstrap.min.css";  */
+/* You can add global styles to this file, and also import other style files */
+
+.success-snackbar{
+    background-color: #188D18;
+    color: #ffffff;
+}
+.error-snackbar{
+    background-color:#FA7070;
+    color:#ffffff;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
